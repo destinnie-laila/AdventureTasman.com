@@ -12,11 +12,11 @@ class App extends Component{
       <React.Fragment>
         <Router>
           <Switch>
-          <Route eact path="/" componet ={Home}/>
-          <Route path="/login" componet ={Login}/>
-          <Route path="/adventures" componet ={Adventures}/>
-          <Route path="/gallery" componet ={Gallery}/>
-          <Route path="/map" componet ={Maps}/>
+          <Route eact path="/" component ={Home}/>
+          <Route path="/login" component ={Login}/>
+          <Route path="/adventures" component ={Adventures}/>
+          <Route path="/gallery" component ={Gallery}/>
+          <Route path="/map" component ={Maps}/>
           <Route component={NoMatch} />
         
 

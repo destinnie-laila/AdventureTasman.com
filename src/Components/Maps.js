@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const Maps = () => (
+const Maps = () => (
     
         <div>
             <h1>Map</h1>

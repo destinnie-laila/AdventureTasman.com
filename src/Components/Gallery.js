@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const Gallery = () => (
+const Gallery = () => (
     
         <div>
             <h1>Check out what people are doing</h1>

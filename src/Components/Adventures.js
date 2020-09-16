@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const Adventures = () => (
+const Adventures = () => (
     
         <div>
             <h1>Explore your Adventure</h1>
