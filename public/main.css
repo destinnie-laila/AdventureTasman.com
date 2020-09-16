@@ -11,8 +11,6 @@
 }
 
 .navbar-logo {
-    margin-left: 5rem;
-    padding-top: 25px;
     float:left;
     text-decoration: none;
     cursor: pointer;
@@ -38,7 +36,8 @@ display: none;
 /* ======= HomePage CSS ========= */
 .home-title {
     text-align : center;
-    margin-block: 2rem;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 
