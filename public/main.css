@@ -1,3 +1,5 @@
+/* ======= Navagation Bar CSS ========= */
+
 .navbar {
     background: #ba470d;
     height: 5rem;
@@ -33,6 +35,11 @@ display: none;
     padding-top: 2rem;
 }
 
-/*_______________________body___________ */
+/* ======= HomePage CSS ========= */
+.home-title {
+    text-align : center;
+    margin-block: 2rem;
+}
+
 
 /*_______________________Adventures page___________ */

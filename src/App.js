@@ -14,8 +14,11 @@ class App extends Component {
   render() {
     return (
       <Fragment>
+       
         <Router>
+        
           <Navbar/>
+     
           <Switch>
             <Route exact path="/" component ={Home} />
             <Route exact path="/login" component ={Login} />
@@ -24,7 +27,9 @@ class App extends Component {
             <Route  exact path="/map" component ={Maps} />
             <Route component={NoMatch} />
             </Switch>
+           
         </Router>
+       
       </Fragment>
     );
   }
