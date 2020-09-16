@@ -1,50 +1,65 @@
-import React from 'react';
-import Navbar from 'react-bootstrap/Navbar';
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import './navbar.css';
 
+function Navbar() {
+    const [click, setClick] = useState(false);
 
-const Nav = () => {
-return (
-<>
-  <Navbar bg="dark" variant="dark">
-    <Navbar.Brand href="#home">Navbar</Navbar.Brand>
-    <Nav className="mr-auto">
-      <Nav.Link href="#home">Home</Nav.Link>
-      <Nav.Link href="#features">Features</Nav.Link>
-      <Nav.Link href="#pricing">Pricing</Nav.Link>
-    </Nav>
-    {/* <Form inline>
-      <FormControl type="text" placeholder="Search" className="mr-sm-2" />
-      <Button variant="outline-info">Search</Button>
-    </Form> */}
-  </Navbar>
-  <br />
-  <Navbar bg="primary" variant="dark">
-    <Navbar.Brand href="#home">Navbar</Navbar.Brand>
-    <Nav className="mr-auto">
-      <Nav.Link href="#home">Home</Nav.Link>
-      <Nav.Link href="#features">Features</Nav.Link>
-      <Nav.Link href="#pricing">Pricing</Nav.Link>
-    </Nav>
-    {/* <Form inline>
-      <FormControl type="text" placeholder="Search" className="mr-sm-2" />
-      <Button variant="outline-light">Search</Button>
-    </Form> */}
-  </Navbar>
+    const handleClick = () => setClick(!click);
+    const closeMobileMenu = () => setClick(false);
 
-  <br />
-  <Navbar bg="light" variant="light">
-    <Navbar.Brand href="#home">Navbar</Navbar.Brand>
-    <Nav className="mr-auto">
-      <Nav.Link href="#home">Home</Nav.Link>
-      <Nav.Link href="#features">Features</Nav.Link>
-      <Nav.Link href="#pricing">Pricing</Nav.Link>
-    </Nav>
-    {/* <Form inline>
-      <FormControl type="text" placeholder="Search" className="mr-sm-2" />
-      <Button variant="outline-primary">Search</Button>
-    </Form> */}
-  </Navbar>
-</>
-) 
+    return (
+        <>
+            <nav className='navbar'>
+                <Link to='/' className='navbar-logo'>
+                    Violin For All
+                </Link>
+
+                <div className='menu-icon' onClick={handleClick}>
+                    <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
+                </div>
+                <ul className={click ? 'nav-menu active' : 'nav-menu'}>
+                    <li className='nav-item'>
+                        <Link to='/' className='nav-links' onClick=
+                        {closeMobileMenu}>
+                            Home
+                        </Link>
+                    </li>
+                    <li className='nav-item'>
+                        <Link to='/Login' className='nav-links' onClick=
+                        {closeMobileMenu}>
+                            Login
+                        </Link>
+                    </li>
+                    <li className='nav-item'>
+                        <Link to='/Tutorials' className='nav-links' onClick=
+                        {closeMobileMenu}>
+                            Tutorials
+                        </Link>
+                    </li>
+                    <li className='nav-item'>
+                        <Link to='/SheetMusic' className='nav-links' onClick=
+                        {closeMobileMenu}>
+                            Sheet Music
+                        </Link>
+                    </li>
+                    <li className='nav-item'>
+                        <Link to='/Forum' className='nav-links' onClick=
+                        {closeMobileMenu}>
+                            Forum
+                        </Link>
+                    </li>
+                    <li className='nav-item'>
+                        <Link to='/Message' className='nav-links' onClick=
+                        {closeMobileMenu}>
+                            Message
+                        </Link>
+                    </li>
+                </ul>
+                
+            </nav>
+        </>
+    )
 }
-export default Nav;
+
+export default Navbar;

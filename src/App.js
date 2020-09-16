@@ -6,7 +6,7 @@ import Adventures from './Components/Adventures';
 import Gallery from './Components/Gallery';
 import Maps from './Components/Maps';
 import NoMatch from './Components/NoMatch';
-import Nav from './Components/Navbar';
+import Navbar from './Components/Navbar';
 
 
 class App extends Component {
@@ -15,7 +15,7 @@ class App extends Component {
       <Fragment>
         <Router>
           <Switch>
-            <Route path="/" component ={Nav} />
+            <Route path="/" component ={Navbar} />
             <Route exact path="/" component ={Home} />
             <Route exact path="/login" component ={Login} />
             <Route exact path="/adventures" component ={Adventures} />
