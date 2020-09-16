@@ -9,17 +9,19 @@ import NoMatch from './Components/NoMatch';
 import Navbar from './Components/Navbar';
 
 
+
 class App extends Component {
   render() {
     return (
       <Fragment>
         <Router>
+          <Navbar/>
           <Switch>
-            <Route path="/" component ={Navbar} />
+            {/* <Route path="/" component ={Navbar} />  */}
             <Route exact path="/" component ={Home} />
             <Route exact path="/login" component ={Login} />
             <Route exact path="/adventures" component ={Adventures} />
-           <Route exact path="/gallery" component ={Gallery} />
+            <Route exact path="/gallery" component ={Gallery} />
             <Route  exact path="/map" component ={Maps} />
             <Route component={NoMatch} />
             </Switch>

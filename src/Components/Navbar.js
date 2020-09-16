@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import './navbar.css';
+
 
 function Navbar() {
     const [click, setClick] = useState(false);
@@ -12,7 +12,7 @@ function Navbar() {
         <>
             <nav className='navbar'>
                 <Link to='/' className='navbar-logo'>
-                    Violin For All
+                    Tasman Adventures
                 </Link>
 
                 <div className='menu-icon' onClick={handleClick}>
@@ -26,35 +26,30 @@ function Navbar() {
                         </Link>
                     </li>
                     <li className='nav-item'>
-                        <Link to='/Login' className='nav-links' onClick=
+                        <Link to='/login' className='nav-links' onClick=
                         {closeMobileMenu}>
                             Login
                         </Link>
                     </li>
                     <li className='nav-item'>
-                        <Link to='/Tutorials' className='nav-links' onClick=
+                        <Link to='/adventures' className='nav-links' onClick=
                         {closeMobileMenu}>
-                            Tutorials
+                            Adventures
                         </Link>
                     </li>
                     <li className='nav-item'>
-                        <Link to='/SheetMusic' className='nav-links' onClick=
+                        <Link to='/gallery' className='nav-links' onClick=
                         {closeMobileMenu}>
-                            Sheet Music
+                            Gallery
                         </Link>
                     </li>
                     <li className='nav-item'>
-                        <Link to='/Forum' className='nav-links' onClick=
+                        <Link to='/map' className='nav-links' onClick=
                         {closeMobileMenu}>
-                            Forum
+                            Maps
                         </Link>
                     </li>
-                    <li className='nav-item'>
-                        <Link to='/Message' className='nav-links' onClick=
-                        {closeMobileMenu}>
-                            Message
-                        </Link>
-                    </li>
+                 
                 </ul>
                 
             </nav>
