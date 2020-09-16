@@ -1,12 +1,12 @@
 /* ======= Navagation Bar CSS ========= */
 
 .navbar {
-    background: #ba470d;
+    background: rgba(18, 148, 171, 0.3);
     height: 5rem;
     align-items: center;
     justify-content: center;
     text-align: right;
-    font-family: 'Grandstander', cursive;
+    font-family: 'Permanent Marker', cursive;
     width: 100%;
 }
 
@@ -39,6 +39,7 @@ display: none;
     text-align : center;
     margin-top: 10px;
     margin-bottom: 10px;
+    font-family: 'Permanent Marker', cursive;
 }
 
 
