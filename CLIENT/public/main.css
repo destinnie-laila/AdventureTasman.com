@@ -1,7 +1,7 @@
 /* ======= Navagation Bar CSS ========= */
 
 .navbar {
-    background: rgba(18, 148, 171, 0.3);
+    background: rgba(44,72,76);
     height: 5rem;
     align-items: center;
     justify-content: center;
@@ -15,6 +15,7 @@
     text-decoration: none;
     cursor: pointer;
     font-size: 2.5vw;
+    color: rgb(87,180,169);
 }
 
 .menu-icon {
@@ -24,6 +25,7 @@ font-size: 2.5vw;
 margin-top: 1.2rem;
 float: left;
 display: none;
+color: rgb(87,180,169);
 }
 
 .nav-item {
@@ -31,6 +33,12 @@ display: none;
     padding: 1vw;
     font-size: 1.5vw;
     padding-top: 2rem;
+    color: rgb(87,180,169);
+}
+
+.nav-links {
+color: rgb(87,180,169);
+
 }
 
 
@@ -40,7 +48,15 @@ display: none;
     margin-top: 10px;
     margin-bottom: 10px;
     font-family: 'Permanent Marker', cursive;
+    color: rgb(201,125,93);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 50px;
 }
+
+
 
 
 /*_______________________Login page___________ */
@@ -54,4 +70,16 @@ display: none;
       margin: 0 auto;
       max-width: 320px;
     }
+  }
+
+  /* ===== Footer Component ====== */
+
+  .footer{
+    margin-top: 1rem;
+    padding: 1rem;
+    background-color: rgb(44,72,76);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
   }

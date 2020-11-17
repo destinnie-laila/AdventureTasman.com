@@ -9,6 +9,7 @@ import NoMatch from "./Components/NoMatch";
 import Navbar from "./Components/Navbar";
 import Homee from "./Views/Homee";
 import LoginPage from "./Views/LoginPage";
+import Footer from "./Components/footer";
 
 // == All my components are imported to my app.js as this is the one page application
 //== This also uses routes which routes a page page
@@ -29,6 +30,7 @@ class App extends Component {
             <Route exact path="/map" component={Maps} />
             <Route component={NoMatch} />
           </Switch>
+          <Footer/>
         </Router>
       </Fragment>
     );
