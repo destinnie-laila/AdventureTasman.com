@@ -2,7 +2,7 @@ import React, { Fragment, Component } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 //import Home from "./Components/Home";
 
-import Adventures from "./Components/Adventures";
+import Adventure from "./Views/Adventure";
 import Gallery from "./Components/Gallery";
 import Maps from "./Components/Maps";
 import NoMatch from "./Components/NoMatch";
@@ -25,7 +25,7 @@ class App extends Component {
           <Switch>
             <Route exact path="/" component={Homee} />
             <Route exact path="/login" component={LoginPage} />
-            <Route exact path="/adventures" component={Adventures} />
+            <Route exact path="/adventures" component={Adventure} />
             <Route exact path="/gallery" component={Gallery} />
             <Route exact path="/map" component={Maps} />
             <Route component={NoMatch} />

@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { useImmerReducer } from 'use-immer';
 import { login, storeComment } from '../Components/utils';
+
 // import { ExampleComponent } from './ExampleStyle';
 
 function loginReducer(draft, action) {
@@ -99,7 +100,7 @@ export default function LoginUseContext() {
       <StateContext.Provider value={state}>
         <div className='App useContext'>
 	 {/* <ExampleComponent />} */}
-          <div className='login-container'>
+          <div className='container-login-2'>  
             {isLoggedIn ? (
               <>
                 <h1>Welcome {username}!</h1>
@@ -153,10 +154,12 @@ export default function LoginUseContext() {
   );
 }
 
+
+// Comments stuff ====
 function TodoPage({ todos }) {
   return (
     <div className='todoContainer'>
-      <h2>To Do with Comments</h2>
+      <h2>Comments</h2>
       {todos.map((item) => (
         <TodoItem key={item.title} {...item} />
       ))}
@@ -175,9 +178,9 @@ function TodoItem({ title, completed }) {
 
     dispatch({ type: 'comment' });
 
-    try {
-      alert('Calling api to store the comment - something wrong with the login state');
-      await storeComment({ username, comment }); // <<< HERE WE CONNECT UP TO THE API CALL IN util.js
+    try {  
+      alert('Calling api to store the comment , commment is' + comment);
+      await storeComment(username, comment ); // <<< HERE WE CONNECT UP TO THE API CALL IN util.js
       dispatch({ type: 'success' });
     } catch (error) {
       dispatch({ type: 'error' });

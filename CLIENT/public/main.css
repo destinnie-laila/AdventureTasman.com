@@ -56,21 +56,24 @@ color: rgb(87,180,169);
     font-size: 50px;
 }
 
-
+.img{
+  opacity: 0.8;
+}
 
 
 /*_______________________Login page___________ */
 
-@media all and (min-width: 480px) {
-    .Login {
-      padding: 60px 0;
-    }
+.WelcomeTitle{
+    text-align : center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-family: 'Permanent Marker', cursive;
+    color: rgb(201,125,93);
+}
+
+.Login-Container{
   
-    .Login form {
-      margin: 0 auto;
-      max-width: 320px;
-    }
-  }
+}
 
   /* ===== Footer Component ====== */
 

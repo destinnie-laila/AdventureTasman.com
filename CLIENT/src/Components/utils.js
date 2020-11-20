@@ -40,19 +40,20 @@ async function submitComment(pUserName, pComment){
       
      
   };
-  alert("sending " + requestOptions.body);
-  const res = await fetch('https://webdev.talos.net.nz/~todd/api/comment', requestOptions);
+  alert("sending " + pComment + ": " + requestOptions.body);
+  const res = await fetch('http://localhost:3001/comment', requestOptions);
   return res;
 }
 
-export async function storeComment({ username, pcomment }) {
+export async function storeComment(username, pcomment ) {
+  alert('COmment is '+ pcomment);
 return new Promise((resolve, reject) => {
   submitComment(username,pcomment)
   .then( res => res.json())
   .then(data => {
     alert("DATA IS"+data); // JSON data parsed by `data.json()` call
     let resultObj = (JSON.parse(data))[0];
-    if(resultObj.Result != 1 )
+    if(resultObj.Result != 'Stored a comment' )
         reject();
     else 
         resolve();
