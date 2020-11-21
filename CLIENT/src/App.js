@@ -7,7 +7,7 @@ import Gallery from "./Components/Gallery";
 import Maps from "./Components/Maps";
 import NoMatch from "./Components/NoMatch";
 import Navbar from "./Components/Navbar";
-import Homee from "./Views/Homee";
+import HomePage from "./Views/Homee";
 import LoginPage from "./Views/LoginPage";
 import Footer from "./Components/footer";
 
@@ -23,7 +23,7 @@ class App extends Component {
           <Navbar />
 
           <Switch>
-            <Route exact path="/" component={Homee} />
+            <Route exact path="/" component={HomePage} />
             <Route exact path="/login" component={LoginPage} />
             <Route exact path="/adventures" component={Adventure} />
             <Route exact path="/gallery" component={Gallery} />

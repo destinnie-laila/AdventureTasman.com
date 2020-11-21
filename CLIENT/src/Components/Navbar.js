@@ -12,6 +12,8 @@ function Navbar() {
   const handleClick = () => setClick(!click);
   const closeMobileMenu = () => setClick(false);
 
+  // NavBar uses useState which is set to false becuase nothing is clicked on load
+  
   return (
     <>
       <nav className="navbar">

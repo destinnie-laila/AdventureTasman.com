@@ -56,7 +56,7 @@ color: rgb(87,180,169);
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 50px;
+    font-size: 80px;
 }
 
 
@@ -68,9 +68,15 @@ color: rgb(87,180,169);
 .aboutTitle{
   text-align : center;
   margin-top: 10px;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
   font-family: 'Permanent Marker', cursive;
   color: rgb(87,180,169);
+  font-size: 55px;
+}
+
+.aboutP {
+             
+  font-size: 30px; 
 }
 
 
@@ -84,6 +90,17 @@ color: rgb(87,180,169);
     color: rgb(201,125,93);
 }
 
+/* ========= Map CSS ============= */
+
+.mapTitle{
+  text-align : center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-family: 'Permanent Marker', cursive;
+  color: rgb(201,125,93);
+  font-size:70px;
+
+}
 
   /* ===== Footer Component ====== */
 
@@ -117,3 +134,81 @@ color: rgb(87,180,169);
       text-align: center;
       font-family: 'Play', sans-serif;
     }
+
+ /*======= End of footer ===========*/
+
+
+
+
+
+ /* Home Page Responsive Design  */
+
+/* Change Responsive for 800px (Ipad) */
+
+            @media only screen and (max-width: 800px){
+              .centre{
+                text-align: center;
+                font-family: 'Play', sans-serif;
+              }
+            }
+        
+            @media only screen and (max-width: 800px){
+              .ContactTitle{
+                text-align : center;
+                margin-top: 10px;
+                margin-bottom: 10px;
+                font-family: 'Permanent Marker', cursive;
+                color:  rgb(201,125,93);
+                font-size: 20px;
+              }
+              }
+        
+              @media only screen and (max-width: 800px){
+                .home-title {
+                  text-align : center;
+                  margin-top: 10px;
+                  margin-bottom: 10px;
+                  font-family: 'Permanent Marker', cursive;
+                  color:  rgb(201,125,93);
+                  position: absolute;
+                  top: 25%;
+                  left: 50%; 
+                  transform: translate(-50%, -50%);
+                  font-size: 37px; 
+              }
+                }
+        
+                @media only screen and (max-width: 800px){
+                  .aboutTitle {
+                   
+                    font-size: 30px; 
+                }
+                  }
+        
+                  @media only screen and (max-width: 800px){
+                    .aboutP {
+                     
+                      font-size: 18px; 
+                      color: blueviolet;
+                  }
+                    }
+/* ==========================// Adventures Page */
+
+                    @media only screen and (max-width: 800px){
+                      .card {
+                       
+                        font-size: 18px; 
+                    }
+                      }
+
+                      @media only screen and (max-width: 600px){
+                        .card {
+                         
+                          font-size: 10px; 
+                      }
+                        }
+
+
+        
+    
+   

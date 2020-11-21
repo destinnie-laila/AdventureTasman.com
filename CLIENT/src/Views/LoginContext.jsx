@@ -1,48 +1,44 @@
-import React, { useContext } from 'react';
-import { useImmerReducer } from 'use-immer';
-import { login, storeComment } from '../Components/utils';
+import React, { useContext } from "react";
+import { useImmerReducer } from "use-immer";
+import { login, storeComment } from "../Components/utils";
 import Container from "react-bootstrap/Container";
 // import { ExampleComponent } from './ExampleStyle';
 
 function loginReducer(draft, action) {
   switch (action.type) {
-    case 'field': {
+    case "field": {
       draft[action.fieldName] = action.payload;
       return;
     }
-    case 'login': {
-      draft.error = '';
+    case "login": {
+      draft.error = "";
       draft.isLoading = true;
       return;
     }
-    case 'success': {
+    case "success": {
       draft.isLoggedIn = true;
       draft.isLoading = false;
       //draft.username = '';
-      draft.password = '';
+      draft.password = "";
       return;
     }
-    case 'error': {
-      draft.error = 'Incorrect username or password!';
+    case "error": {
+      draft.error = "Incorrect username or password!";
       draft.isLoggedIn = false;
       draft.isLoading = false;
-      draft.username = '';
-      draft.password = '';
+      draft.username = "";
+      draft.password = "";
       return;
     }
-    case 'logOut': {
+    case "logOut": {
       draft.isLoggedIn = false;
       return;
     }
-    // case 'toggleTodoCompleted': {
-    //   const todo = draft.todos.find((item) => item.title === action.payload);
-    //   todo.completed = !todo.completed;
-    //   return;
-    // }
-    case 'comment':{
-        draft.error = '';
-        draft.isLoading = true;
-        return;
+
+    case "comment": {
+      draft.error = "";
+      draft.isLoading = true;
+      return;
     }
     default:
       return;
@@ -51,26 +47,18 @@ function loginReducer(draft, action) {
 
 const todos = [
   {
-    title: 'Get milk',
+    title: "Here Are Comments"
     // completed: true,
-  },
-  // {
-  //   title: 'Make YouTube video',
-  //   completed: false,
-  // },
-  // {
-  //   title: 'Write blog post',
-  //   completed: false,
-  // },
+  }
 ];
 
 const initialState = {
-  username: '',
-  password: '',
+  username: "",
+  password: "",
   isLoading: false,
-  error: '',
+  error: "",
   isLoggedIn: false,
-  todos,
+  todos
 };
 
 const StateContext = React.createContext();
@@ -80,165 +68,140 @@ export default function LoginUseContext() {
   const [state, dispatch] = useImmerReducer(loginReducer, initialState);
   const { username, password, isLoading, error, isLoggedIn, todos } = state;
 
-  const onSubmit = async (e) => {
+  const onSubmit = async e => {
     e.preventDefault();
 
-    dispatch({ type: 'login' });
+    dispatch({ type: "login" });
 
     try {
       await login({ username, password }); // <<< HERE WE CONNECT UP TO THE API CALL IN util.js
-      dispatch({ type: 'success' });
+      dispatch({ type: "success" });
     } catch (error) {
-      dispatch({ type: 'error' });
+      dispatch({ type: "error" });
     }
   };
 
-
   return (
-    <div>  
-    <DispatchContext.Provider value={dispatch}>
-      <StateContext.Provider value={state}>
-        <div className='App useContext'>
-	 {/* <ExampleComponent />} */}
-   <Container>
-          <div className='container-login-2'>  
-            {isLoggedIn ? (
-              <>
-                <h1>Welcome {username}!</h1>
-                <button onClick={() => dispatch({ type: 'logOut' })}>
-                  Log Out
-                </button>          
-                <TodoPage todos={todos} />
-
-              </>
-            ) : (
-              <form className='form' onSubmit={onSubmit}> {/* HERE THE onSubmit is set up !!*/ }
-                {error && <p className='error'>{error}</p>}
-                <p>Please Login!</p>
-                <input
-                  type='text'
-                  placeholder='username'
-                  value={username}
-                  onChange={(e) =>
-                    dispatch({
-                      type: 'field',
-                      fieldName: 'username',
-                      payload: e.currentTarget.value,
-                    })
-                  }
-                />
-                <input
-                  type='password'
-                  placeholder='password'
-                  autoComplete='new-password'
-                  value={password}
-                  onChange={(e) =>
-                    dispatch({
-                      type: 'field',
-                      fieldName: 'password',
-                      payload: e.currentTarget.value,
-                    })
-                  }
-                />
-                <button className='submit' type='submit' disabled={isLoading}>
-                  {isLoading ? 'Logging in...' : 'Log In'}
-                </button>
-              </form>
-            )}
+    <div>
+      <DispatchContext.Provider value={dispatch}>
+        <StateContext.Provider value={state}>
+          <div className="App useContext">
+            <Container>
+              <div className="container-login-2">
+                {isLoggedIn ? (
+                  <>
+                    <h1>Welcome {username}!</h1>
+                    <button onClick={() => dispatch({ type: "logOut" })}>
+                      Log Out
+                    </button>
+                    <TodoPage todos={todos} />
+                  </>
+                ) : (
+                  <form className="form" onSubmit={onSubmit}>
+                    {" "}
+                    {/* HERE THE onSubmit is set up !!*/}
+                    {error && <p className="error">{error}</p>}
+                    <p>Please Login!</p>
+                    <input
+                      type="text"
+                      placeholder="username"
+                      value={username}
+                      onChange={e =>
+                        dispatch({
+                          type: "field",
+                          fieldName: "username",
+                          payload: e.currentTarget.value
+                        })
+                      }
+                    />
+                    <input
+                      type="password"
+                      placeholder="password"
+                      autoComplete="new-password"
+                      value={password}
+                      onChange={e =>
+                        dispatch({
+                          type: "field",
+                          fieldName: "password",
+                          payload: e.currentTarget.value
+                        })
+                      }
+                    />
+                    {/* /* When button is clicked the function is disabled and shows Loging in */}
+                    <button
+                      className="submit"
+                      type="submit"
+                      disabled={isLoading}
+                    >
+                      {isLoading ? "Logging in..." : "Log In"}
+                    </button>
+                  </form>
+                )}
+              </div>
+            </Container>
           </div>
-          </Container>
-
-        </div>
-      </StateContext.Provider>
-    </DispatchContext.Provider>
-   </div> 
+        </StateContext.Provider>
+      </DispatchContext.Provider>
+    </div>
   );
 }
 
-
-// Comments stuff ====
+// ======== Comments Stuff
 function TodoPage({ todos }) {
   return (
-    <div className='todoContainer'>
-      <h2>Comments</h2>
-      {todos.map((item) => (
+    <div className="todoContainer">
+      <h2 className="aboutTitle">Comments</h2>
+      {todos.map(item => (
         <TodoItem key={item.title} {...item} />
       ))}
     </div>
   );
 }
 
-function TodoItem({ title, completed }) {
+// Changed TodoItem as I did not need the items I was only after comments and username
+function TodoItem() {
   const dispatch = useContext(DispatchContext);
   const state = useContext(StateContext);
-  const   { username, comment, isLoading, error, isLoggedIn } = state;
-  //const isLoggedIn = true;
+  const { username, comment, error } = state;
 
-  const onSubmitComment = async (e) => {
+  const onSubmitComment = async e => {
     e.preventDefault();
 
-    dispatch({ type: 'comment' });
-
-    try {  
-      alert('Calling api to store the comment , commment is' + comment);
-      await storeComment(username, comment ); // <<< HERE WE CONNECT UP TO THE API CALL IN util.js
-      dispatch({ type: 'success' });
+    dispatch({ type: "comment" });
+    // This code renders once a submit event takes place it is calling the api
+    try {
+      alert("Calling api to store the comment , your commment is" + comment);
+      await storeComment(username, comment); // <<< HERE WE CONNECT UP TO THE API CALL IN util.js
+      dispatch({ type: "success" });
     } catch (error) {
-      dispatch({ type: 'error' });
+      dispatch({ type: "error" });
     }
   };
+
+  // Made changes to the comments section to be able to
   return (
-    <div className='todoItem'>
-     <p>{title}</p>
-      <div>
+    <Container>
+      <form className="form" onSubmit={onSubmitComment}>
+        {" "}
+        {/* HERE THE onSubmiComment is set up !!*/}
+        {error && <p className="error">{error}</p>}
+        <p>Enter Comment</p>
         <input
-          type='checkbox'
-          checked={completed}
-          onClick={() => {
-            if (!isLoggedIn) {
-              alert('Please login to click this!');
-            }
-          }}
-          onChange={() => {
-            if (isLoggedIn) {
-              dispatch({ type: 'toggleTodoCompleted', payload: title });
-            }
-          }}
+          type="text"
+          placeholder="comment"
+          value={comment}
+          onChange={e =>
+            dispatch({
+              type: "field",
+              fieldName: "comment",
+              payload: e.currentTarget.value
+            })
+          }
         />
-      </div>
-      <div>
-      <form className='form' onSubmit={onSubmitComment}> {/* HERE THE onSubmiComment is set up !!*/ }
-                {error && <p className='error'>{error}</p>}
-                <p>Enter Comment</p>
-                <input
-                  type='hidden'
-                  placeholder='username'
-                  value={username}
-                  onChange={(e) =>
-                    dispatch({
-                      type: 'field',
-                      fieldName: 'username',
-                      payload: e.currentTarget.value,
-                    })
-                  }
-                />
-                <input
-                  type='text'
-                  placeholder='comment'
-                  value={comment}
-                  onChange={(e) =>
-                    dispatch({
-                      type: 'field',
-                      fieldName: 'comment',
-                      payload: e.currentTarget.value,
-                    })
-                  }
-                />
-                <button className='submit' type='submit' disabled={isLoading}>
-                  {isLoading ? 'Logging in...' : 'Save'}
-                </button>
-              </form>
-    </div>
-     </div>
+        <button className="submit" type="comment">
+          {comment ? "Saving..." : "Save"}
+        </button>
+      </form>
+    </Container>
   );
 }

@@ -4,7 +4,7 @@ import kahurangi from "../Images/kahurangi.jpeg";
 import Image from "react-bootstrap/Image";
 import About from "../Components/AboutHomePage";
 const Homee = () => (
-  <Home name="blah">
+  <Home>
     <Image src={kahurangi} fluid />
     <About/>
   </Home>
