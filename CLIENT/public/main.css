@@ -102,6 +102,12 @@
   text-align: center;
 }
 
+.CentreButton{
+  margin-left: 25rem;
+  margin-top: 2rem;
+  width: 30%;
+  text-align: center;
+}
 /* ========= End of Login CSS ============= */
 
 /* ========= Map CSS ============= */

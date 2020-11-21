@@ -61,7 +61,7 @@ const initialState = {
   isLoggedIn: false,
   todos
 };
-
+// ==== UseContext ReactHooks
 const StateContext = React.createContext();
 const DispatchContext = React.createContext();
 
@@ -86,7 +86,7 @@ export default function LoginUseContext() {
     <div>
       <DispatchContext.Provider value={dispatch}>
         <StateContext.Provider value={state}>
-          {/* <div className="App useContext"> */}
+        
             <Container className="alignForm">
               <div className="container-login-2">
                 {isLoggedIn ? (
@@ -133,14 +133,15 @@ export default function LoginUseContext() {
                       }
                     />
                     {/* /* When button is clicked the function is disabled and shows Loging in */}
-                    <button
+                    <button 
+                     
                       className="submit"
-                      className="floatRight"
+                      className="CentreButton"
                       type="submit"
                       disabled={isLoading}
                     >
                       {isLoading ? "Logging in..." : "Log In"}
-                    </button>
+                    </button>{""}
                   </form>
                 )}
               </div>
