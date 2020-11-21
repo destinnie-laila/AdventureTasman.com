@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { useImmerReducer } from 'use-immer';
 import { login, storeComment } from '../Components/utils';
-
+import Container from "react-bootstrap/Container";
 // import { ExampleComponent } from './ExampleStyle';
 
 function loginReducer(draft, action) {
@@ -34,11 +34,11 @@ function loginReducer(draft, action) {
       draft.isLoggedIn = false;
       return;
     }
-    case 'toggleTodoCompleted': {
-      const todo = draft.todos.find((item) => item.title === action.payload);
-      todo.completed = !todo.completed;
-      return;
-    }
+    // case 'toggleTodoCompleted': {
+    //   const todo = draft.todos.find((item) => item.title === action.payload);
+    //   todo.completed = !todo.completed;
+    //   return;
+    // }
     case 'comment':{
         draft.error = '';
         draft.isLoading = true;
@@ -52,16 +52,16 @@ function loginReducer(draft, action) {
 const todos = [
   {
     title: 'Get milk',
-    completed: true,
+    // completed: true,
   },
-  {
-    title: 'Make YouTube video',
-    completed: false,
-  },
-  {
-    title: 'Write blog post',
-    completed: false,
-  },
+  // {
+  //   title: 'Make YouTube video',
+  //   completed: false,
+  // },
+  // {
+  //   title: 'Write blog post',
+  //   completed: false,
+  // },
 ];
 
 const initialState = {
@@ -100,6 +100,7 @@ export default function LoginUseContext() {
       <StateContext.Provider value={state}>
         <div className='App useContext'>
 	 {/* <ExampleComponent />} */}
+   <Container>
           <div className='container-login-2'>  
             {isLoggedIn ? (
               <>
@@ -145,7 +146,7 @@ export default function LoginUseContext() {
               </form>
             )}
           </div>
-
+          </Container>
 
         </div>
       </StateContext.Provider>
@@ -188,7 +189,7 @@ function TodoItem({ title, completed }) {
   };
   return (
     <div className='todoItem'>
-      <p>{title}</p>
+     <p>{title}</p>
       <div>
         <input
           type='checkbox'
@@ -237,7 +238,7 @@ function TodoItem({ title, completed }) {
                   {isLoading ? 'Logging in...' : 'Save'}
                 </button>
               </form>
-      </div>
     </div>
+     </div>
   );
 }

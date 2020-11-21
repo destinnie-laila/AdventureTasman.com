@@ -2,12 +2,14 @@
 
 .navbar {
     background: rgba(44,72,76);
-    height: 5rem;
     align-items: center;
     justify-content: center;
     text-align: right;
     font-family: 'Permanent Marker', cursive;
     width: 100%;
+    position: fixed;
+    top: 0;
+   
 }
 
 .navbar-logo {
@@ -34,6 +36,7 @@ color: rgb(87,180,169);
     font-size: 1.5vw;
     padding-top: 2rem;
     color: rgb(87,180,169);
+   
 }
 
 .nav-links {
@@ -56,8 +59,18 @@ color: rgb(87,180,169);
     font-size: 50px;
 }
 
-.img{
-  opacity: 0.8;
+
+.containersize{
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+.aboutTitle{
+  text-align : center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-family: 'Permanent Marker', cursive;
+  color: rgb(87,180,169);
 }
 
 
@@ -71,18 +84,36 @@ color: rgb(87,180,169);
     color: rgb(201,125,93);
 }
 
-.Login-Container{
-  
-}
 
   /* ===== Footer Component ====== */
 
   .footer{
     margin-top: 1rem;
     padding: 1rem;
-    background-color: rgb(44,72,76);
+    background-color: rgb(44,72,76, 0.8);
     position: fixed;
     bottom: 0;
     left: 0;
     width: 100%;
+    color: rgb(87,180,169);
+    font-family: 'Play', sans-serif;
+   
+    
   }
+
+  .ContactTitle{
+    text-align : center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-family: 'Permanent Marker', cursive;
+    color:  rgb(201,125,93);
+  }
+    .fas{
+      margin-right: 2rem;
+
+    }
+
+    .centre{
+      text-align: center;
+      font-family: 'Play', sans-serif;
+    }
