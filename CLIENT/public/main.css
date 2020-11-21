@@ -1,214 +1,225 @@
 /* ======= Navagation Bar CSS ========= */
 
 .navbar {
-    background: rgba(44,72,76);
-    align-items: center;
-    justify-content: center;
-    text-align: right;
-    font-family: 'Permanent Marker', cursive;
-    width: 100%;
-    position: fixed;
-    top: 0;
-   
+  background: rgba(44, 72, 76);
+  align-items: center;
+  justify-content: center;
+  text-align: right;
+  font-family: "Permanent Marker", cursive;
+  width: 100%;
+  position: fixed;
+  top: 0;
 }
 
 .navbar-logo {
-    float:left;
-    text-decoration: none;
-    cursor: pointer;
-    font-size: 2.5vw;
-    color: rgb(87,180,169);
+  float: left;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 2.5vw;
+  color: rgb(87, 180, 169);
 }
 
 .menu-icon {
-justify-self: start;
-margin-left: -14rem;
-font-size: 2.5vw;
-margin-top: 1.2rem;
-float: left;
-display: none;
-color: rgb(87,180,169);
+  justify-self: start;
+  margin-left: -14rem;
+  font-size: 2.5vw;
+  margin-top: 1.2rem;
+  float: left;
+  display: none;
+  color: rgb(87, 180, 169);
 }
 
 .nav-item {
-    display: inline-block;
-    padding: 1vw;
-    font-size: 1.5vw;
-    padding-top: 2rem;
-    color: rgb(87,180,169);
-   
+  display: inline-block;
+  padding: 1vw;
+  font-size: 1.5vw;
+  padding-top: 2rem;
+  color: rgb(87, 180, 169);
 }
 
 .nav-links {
-color: rgb(87,180,169);
-
+  color: rgb(87, 180, 169);
 }
 
+/* ========= End of NavBar CSS ============= */
 
 /* ============ HomePage CSS ========= */
 .home-title {
-    text-align : center;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    font-family: 'Permanent Marker', cursive;
-    color: rgb(201,125,93);
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 80px;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-family: "Permanent Marker", cursive;
+  color: rgb(201, 125, 93);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 80px;
 }
 
-
-.containersize{
+.containersize {
   margin-top: 3rem;
   margin-bottom: 3rem;
 }
 
-.aboutTitle{
-  text-align : center;
+.aboutTitle {
+  text-align: center;
   margin-top: 10px;
   margin-bottom: 15px;
-  font-family: 'Permanent Marker', cursive;
-  color: rgb(87,180,169);
+  font-family: "Permanent Marker", cursive;
+  color: rgb(87, 180, 169);
   font-size: 55px;
 }
 
 .aboutP {
-             
-  font-size: 30px; 
+  font-size: 30px;
 }
 
+/* ========= End of Home CSS ============= */
 
-/*_______________________Login page___________ */
+/*============Login page===================*/
 
-.WelcomeTitle{
-    text-align : center;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    font-family: 'Permanent Marker', cursive;
-    color: rgb(201,125,93);
+.WelcomeTitle {
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-family: "Permanent Marker", cursive;
+  color: rgb(201, 125, 93);
 }
+
+.alignForm{
+
+  margin: auto;
+  width: 50%;
+  border: 3px solid green;
+  padding: 10px;
+
+}
+
+.floatRight{
+  margin: auto;
+  width: 50%;
+  text-align: center;
+}
+
+/* ========= End of Login CSS ============= */
 
 /* ========= Map CSS ============= */
 
-.mapTitle{
-  text-align : center;
+.mapTitle {
+  text-align: center;
   margin-top: 10px;
   margin-bottom: 10px;
-  font-family: 'Permanent Marker', cursive;
-  color: rgb(201,125,93);
-  font-size:70px;
+  font-family: "Permanent Marker", cursive;
+  color: rgb(201, 125, 93);
+  font-size: 70px;
+}
+/* ========= End of Map CSS ============= */
 
+/* ===== Footer Component ====== */
+
+.footer {
+  margin-top: 1rem;
+  padding: 1rem;
+  background-color: rgb(44, 72, 76, 0.8);
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  color: rgb(87, 180, 169);
+  font-family: "Play", sans-serif;
 }
 
-  /* ===== Footer Component ====== */
+.ContactTitle {
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-family: "Permanent Marker", cursive;
+  color: rgb(201, 125, 93);
+}
+.fas {
+  margin-right: 2rem;
+}
 
-  .footer{
-    margin-top: 1rem;
-    padding: 1rem;
-    background-color: rgb(44,72,76, 0.8);
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    color: rgb(87,180,169);
-    font-family: 'Play', sans-serif;
-   
-    
-  }
+.centre {
+  text-align: center;
+  font-family: "Play", sans-serif;
+}
 
-  .ContactTitle{
-    text-align : center;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    font-family: 'Permanent Marker', cursive;
-    color:  rgb(201,125,93);
-  }
-    .fas{
-      margin-right: 2rem;
+/*======= End of footer ===========*/
 
-    }
-
-    .centre{
-      text-align: center;
-      font-family: 'Play', sans-serif;
-    }
-
- /*======= End of footer ===========*/
-
-
-
-
-
- /* Home Page Responsive Design  */
+/*==========Home Page Responsive Design  */
 
 /* Change Responsive for 800px (Ipad) */
 
-            @media only screen and (max-width: 800px){
-              .centre{
-                text-align: center;
-                font-family: 'Play', sans-serif;
-              }
-            }
-        
-            @media only screen and (max-width: 800px){
-              .ContactTitle{
-                text-align : center;
-                margin-top: 10px;
-                margin-bottom: 10px;
-                font-family: 'Permanent Marker', cursive;
-                color:  rgb(201,125,93);
-                font-size: 20px;
-              }
-              }
-        
-              @media only screen and (max-width: 800px){
-                .home-title {
-                  text-align : center;
-                  margin-top: 10px;
-                  margin-bottom: 10px;
-                  font-family: 'Permanent Marker', cursive;
-                  color:  rgb(201,125,93);
-                  position: absolute;
-                  top: 25%;
-                  left: 50%; 
-                  transform: translate(-50%, -50%);
-                  font-size: 37px; 
-              }
-                }
-        
-                @media only screen and (max-width: 800px){
-                  .aboutTitle {
-                   
-                    font-size: 30px; 
-                }
-                  }
-        
-                  @media only screen and (max-width: 800px){
-                    .aboutP {
-                     
-                      font-size: 18px; 
-                      color: blueviolet;
-                  }
-                    }
+@media only screen and (max-width: 800px) {
+  .centre {
+    text-align: center;
+    font-family: "Play", sans-serif;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .ContactTitle {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-family: "Permanent Marker", cursive;
+    color: rgb(201, 125, 93);
+    font-size: 20px;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .home-title {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-family: "Permanent Marker", cursive;
+    color: rgb(201, 125, 93);
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 37px;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .aboutTitle {
+    font-size: 30px;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .aboutP {
+    font-size: 18px;
+    color: blueviolet;
+  }
+}
 /* ==========================// Adventures Page */
 
-                    @media only screen and (max-width: 800px){
-                      .card {
-                       
-                        font-size: 18px; 
-                    }
-                      }
+@media only screen and (max-width: 800px) {
+  .card {
+    font-size: 18px;
+  }
+}
 
-                      @media only screen and (max-width: 600px){
-                        .card {
-                         
-                          font-size: 10px; 
-                      }
-                        }
+@media only screen and (max-width: 600px) {
+  .card {
+    font-size: 10px;
+  }
+}
 
+/* ===========Maps Page============== */
 
-        
-    
-   
+@media only screen and (max-width: 800px) {
+  .mapTitle {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-family: "Permanent Marker", cursive;
+    color: rgb(201, 125, 93);
+    font-size: 35px;
+  }
+}

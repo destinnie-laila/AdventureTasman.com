@@ -40,6 +40,7 @@ function loginReducer(draft, action) {
       draft.isLoading = true;
       return;
     }
+
     default:
       return;
   }
@@ -85,8 +86,8 @@ export default function LoginUseContext() {
     <div>
       <DispatchContext.Provider value={dispatch}>
         <StateContext.Provider value={state}>
-          <div className="App useContext">
-            <Container>
+          {/* <div className="App useContext"> */}
+            <Container className="alignForm">
               <div className="container-login-2">
                 {isLoggedIn ? (
                   <>
@@ -94,15 +95,18 @@ export default function LoginUseContext() {
                     <button onClick={() => dispatch({ type: "logOut" })}>
                       Log Out
                     </button>
+
+
                     <TodoPage todos={todos} />
                   </>
                 ) : (
-                  <form className="form" onSubmit={onSubmit}>
+                  <form  onSubmit={onSubmit}>
                     {" "}
                     {/* HERE THE onSubmit is set up !!*/}
                     {error && <p className="error">{error}</p>}
-                    <p>Please Login!</p>
+                    <p className="floatRight">Please Login!</p>
                     <input
+                    className="floatRight"
                       type="text"
                       placeholder="username"
                       value={username}
@@ -115,6 +119,7 @@ export default function LoginUseContext() {
                       }
                     />
                     <input
+                    className="floatRight"
                       type="password"
                       placeholder="password"
                       autoComplete="new-password"
@@ -130,6 +135,7 @@ export default function LoginUseContext() {
                     {/* /* When button is clicked the function is disabled and shows Loging in */}
                     <button
                       className="submit"
+                      className="floatRight"
                       type="submit"
                       disabled={isLoading}
                     >
@@ -139,7 +145,7 @@ export default function LoginUseContext() {
                 )}
               </div>
             </Container>
-          </div>
+          {/* </div> */}
         </StateContext.Provider>
       </DispatchContext.Provider>
     </div>
