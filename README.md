@@ -1,6 +1,6 @@
-#Tasman Adventures
+# Tasman Adventures
 
-> ReadMe 2 has information on running this website on a server<br>
+## ReadMe 2 has information on running this website on a server<br>
 
 To run Client-Side <br>
 1. cd CLIENT/ <br>
@@ -17,16 +17,15 @@ you will see Express , welcome to express, In my Server workspace there are rout
 these routes are used in place of the 3001/login , 3001/users they will show you the data stored in the database
 
 
-## M1
-web milestone 1
-
-
-
 ## Starting up app
 
 Ensure you have node.js installed and can run npm commands, to be safe go to terminal and type <br>
 **npm install**<br>
 **npm start** <br>
+
+### Side Notes <br>
+
+1. All css is stored in a public folder in my client work space called main.css
 
 
 
