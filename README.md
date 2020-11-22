@@ -26,8 +26,8 @@ Ensure you have node.js installed and can run npm commands, to be safe go to ter
 ### Side Notes <br>
 
 1. All css is stored in a public folder in my client work space called main.css
-2. mySQL files sit in the top level of this repo there are 2 files one called Insert.sql and one called WebAPIprocedures.sql <br>
-these are needed for the Server-side to give you data back when logging in and saves the comments to the DB. You must craete a database then run these queries. You will need to make changes to the utils.js in the client>components folder and place your own host, username, password, database
+2. mySQL files sit in the dataservices folder called Insert.sql and one called WebAPIprocedures.sql <br>
+these are needed for the Server-side to give you data back when logging in and saves the comments to the DB. You must craete a database then run these queries. You will need to make changes to the dataservices.js in the server>dataservices folder and place your own host, username, password, database
 3. All code that was used else where is refrenced at the bottom of the script in the folders e.g CLIENT>SRC>Components/footer.js has a comment at end of script which gives the link to where the code is from.
 
 
