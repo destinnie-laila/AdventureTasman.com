@@ -18,3 +18,8 @@ function Footer() {
   );
 }
 export default Footer;
+
+
+// Code Reference
+
+// https://reactgo.com/react-sticky-footer/

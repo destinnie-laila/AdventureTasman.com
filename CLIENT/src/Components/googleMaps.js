@@ -41,3 +41,12 @@ class SimpleMap extends Component {
 }
 
 export default SimpleMap;
+
+
+
+// ====== Code reference
+
+// https://www.npmjs.com/package/google-map-react
+
+
+
