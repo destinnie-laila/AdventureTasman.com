@@ -3,7 +3,7 @@ import Home from "../Components/Home";
 import kahurangi from "../Images/kahurangi.jpeg";
 import Image from "react-bootstrap/Image";
 import About from "../Components/AboutHomePage";
-const Homee = () => (
+const HomePage = () => (
   <Home>
     <Image src={kahurangi} fluid />
     <About/>
@@ -11,4 +11,4 @@ const Homee = () => (
   
 );
 
-export default Homee;
+export default HomePage;

@@ -5,7 +5,6 @@ import Adventures from "../Components/Adventures";
 const AdventuresPage = () => (
 
     <Adventures>
-    
     </Adventures>
 
    

@@ -7,9 +7,8 @@ import LoginContext from "../Views/LoginContext";
 function Login() {
   return (
     <div>
-      <h1 className="WelcomeTitle"> WELCOME</h1>{" "}
-     
-  <LoginContext/>
+      <h1 className="WelcomeTitle"> WELCOME</h1> 
+       <LoginContext />  {/* This is a jsx tag that runs the loginUseContext script, It is imported into the login component */}
     </div>
   );
 }
